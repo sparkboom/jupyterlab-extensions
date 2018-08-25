@@ -4,17 +4,17 @@ This is a [monorepo](https://github.com/lerna/lerna#what-does-a-lerna-repo-look-
 
 ## Packages
 
-| Name                                              | Mime types                                                         | File extensions                                            |
-| ------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------- |
-| [mathjax3-extension](packages/mathjax3-extension) | N/A                                                                | N/A                                                        |
+| Name                                              | Mime types | File extensions |
+| ------------------------------------------------- | ---------- | --------------- |
+| [mathjax3-extension](packages/mathjax3-extension) | N/A        | N/A             |
 
 ## Install
 
-* mathjax3-extension: `jupyter labextension install @jupyterlab/mathjax3-extension`
+- mathjax3-extension: `jupyter labextension install sparkboom/my-mathjax3-ext`
 
 ## Requirements
 
-* Node.js >= 4 (see [Installing Node.js and jlpm](https://github.com/jupyterlab/jupyterlab/blob/master/CONTRIBUTING.md#installing-nodejs-and-jlpm) in the JupyterLab docs)
+- Node.js >= 4 (see [Installing Node.js and jlpm](https://github.com/jupyterlab/jupyterlab/blob/master/CONTRIBUTING.md#installing-nodejs-and-jlpm) in the JupyterLab docs)
 
 ### Install
 
@@ -23,18 +23,18 @@ The `jlpm` command is JupyterLab's pinned version of
 `yarn` or `npm` in lieu of `jlpm` below.
 
 ```bash
-git clone https://github.com/jupyterlab/jupyter-renderers.git
-cd jupyter-renderers
+git clone https://github.com/sparkboom/my-mathjax3-ext.git
+cd my-mathjax3-ext
 jlpm
 jlpm build
 ```
 
 ### Link extensions with JupyterLab
 
-Link mathjax3-extension:
+Link my-mathjax3-ext:
 
 ```bash
-jupyter labextension link packages/mathjax3-extension
+jupyter labextension link packages/my-mathjax3-ext
 ```
 
 Link all extensions in `packages`:
@@ -70,5 +70,5 @@ jupyter lab --watch
 ```bash
 jlpm publish
 # If publishing a package for the first time
-npm access public @jupyterlab/<extension name>
+npm access public sparkboom/<extension name>
 ```
