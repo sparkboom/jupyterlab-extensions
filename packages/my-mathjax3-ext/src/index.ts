@@ -62,7 +62,7 @@ export class MathJax3Typesetter implements ILatexTypesetter {
  * The MathJax 3 extension.
  */
 const mathJax3Plugin: JupyterLabPlugin<ILatexTypesetter> = {
-  id: '@jupyterlab/mathjax3-extension:plugin',
+  id: 'sparkboom/my-mathjax3-ext:plugin',
   requires: [],
   provides: ILatexTypesetter,
   activate: () => new MathJax3Typesetter(),

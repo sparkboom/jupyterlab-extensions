@@ -13,28 +13,28 @@ This extension substitutes the MathJax renderer with the MathJax 3 (beta) render
 ## Install
 
 ```bash
-jupyter labextension install @jupyterlab/mathjax3-extension
+jupyter labextension install sparkboom/my-mathjax3-ext
 ```
 
 ## Development
 
 ```bash
 # Clone the repo to your local environment
-git clone https://github.com/jupyterlab/jupyter-renderers.git
+git clone https://github.com/sparkboom/my-mathjax3-ext.git
 cd jupyter-renderers
 # Install dependencies
 npm install
 # Build Typescript source
 npm run build
 # Link your development version of the extension with JupyterLab
-jupyter labextension link packages/mathjax3-extension
+jupyter labextension link packages/my-mathjax3-ext
 # Rebuild Typescript source after making changes
 npm run build
 # Rebuild JupyterLab after making any changes
 jupyter lab build
 ```
 
-You can watch the jupyter-renderers directory and run JupyterLab in watch mode to watch for changes in the extension's source and automatically rebuild the extension and application.
+You can watch the my-mathjax3-ext directory and run JupyterLab in watch mode to watch for changes in the extension's source and automatically rebuild the extension and application.
 
 ```bash
 # Run jupyterlab in watch mode in one terminal tab
@@ -46,5 +46,5 @@ npm run watch
 ## Uninstall
 
 ```bash
-jupyter labextension uninstall @jupyterlab/mathjax3-extension
+jupyter labextension uninstall sparkboom/mathjax3-extension
 ```
