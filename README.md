@@ -1,36 +1,16 @@
 # Jupyter Renderers
 
-[![Binder](https://beta.mybinder.org/badge.svg)](https://mybinder.org/v2/gh/jupyterlab/jupyter-renderers/master?urlpath=lab/tree/notebooks)
-
 This is a [monorepo](https://github.com/lerna/lerna#what-does-a-lerna-repo-look-like) that consists of generic renderers for common file types and mime types as well as renderer extensions for [JupyterLab](https://github.com/jupyterlab/jupyterlab).
 
 ## Packages
 
 | Name                                              | Mime types                                                         | File extensions                                            |
 | ------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------- |
-| [fasta-extension](packages/fasta-extension)       | `application/vnd.fasta.fasta`                                      | `.fasta`                                                   |
-| [geojson-extension](packages/geojson-extension)   | `application/geo+json`                                             | `.geojson`, `.geo.json`                                    |
-| [katex-extension](packages/katex-extension)       | N/A                                                                | N/A                                                        |
 | [mathjax3-extension](packages/mathjax3-extension) | N/A                                                                | N/A                                                        |
-| [plotly-extension](packages/plotly-extension)     | `application/vnd.plotly.v1+json`                                   | `.plotly`, `.plotly.json`                                  |
-| [vega2-extension](packages/vega2-extension)       | `application/vnd.vega.v2+json`, `application/vnd.vegalite.v1+json` | `.vg`, `.vl`, `.vg.json`, `.vl.json`, `.vega`, `.vegalite` |
-| [vega3-extension](packages/vega3-extension)       | `application/vnd.vega.v3+json`, `application/vnd.vegalite.v2+json` | `.vg`, `.vl`, `.vg.json`, `.vl.json`, `.vega`, `.vegalite` |
 
 ## Install
 
-* fasta-extension: `jupyter labextension install @jupyterlab/fasta-extension`
-* geojson-extension: `jupyter labextension install @jupyterlab/geojson-extension`
-* katex-extension: `jupyter labextension install @jupyterlab/katex-extension`
 * mathjax3-extension: `jupyter labextension install @jupyterlab/mathjax3-extension`
-* plotly-extension: `jupyter labextension install @jupyterlab/plotly-extension`
-* vega2-extension: `jupyter labextension install @jupyterlab/vega2-extension`
-* vega3-extension: `jupyter labextension install @jupyterlab/vega3-extension`
-
-## Contributing
-
-If you would like to contribute to the project, please read our [contributor documentation](https://github.com/jupyterlab/jupyterlab/blob/master/CONTRIBUTING.md).
-
-JupyterLab follows the official [Jupyter Code of Conduct](https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md).
 
 ## Requirements
 
@@ -51,10 +31,10 @@ jlpm build
 
 ### Link extensions with JupyterLab
 
-Link geojson-extension:
+Link mathjax3-extension:
 
 ```bash
-jupyter labextension link packages/geojson-extension
+jupyter labextension link packages/mathjax3-extension
 ```
 
 Link all extensions in `packages`:
@@ -75,10 +55,10 @@ jlpm build
 jupyter lab build
 ```
 
-You may also watch the `jupyter-renderers` directory for changes and automatically rebuild:
+You may also watch the `my-mathjax3-ext` directory for changes and automatically rebuild:
 
 ```bash
-# In one terminal tab, watch the jupyter-renderers directory
+# In one terminal tab, watch the my-mathjax3-ext directory
 jlpm watch
 
 # In another terminal tab, run jupyterlab with the watch flag
