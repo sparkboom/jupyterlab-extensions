@@ -1,0 +1,3 @@
+#!/bin/bash
+
+jupyter labextension install @sparkboom/my-mathjax2-ext

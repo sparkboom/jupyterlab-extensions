@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "build": "lerna run build",
-    "link": "lerna exec -- jupyter labextension link . --no-build",
+    "build": "lerna run --parallel build",
+    "link": "lerna exec --parallel -- jupyter labextension link . --no-build",
     "prettier":
       "prettier --write '{!(package),packages/*/!(package),packages/*/!(lib)/**}{.js,.jsx,.ts,.tsx,.css,.json,.md}'",
     "precommit": "lint-staged",
     "publish": "lerna publish --git-remote sparkboom",
-    "watch": "lerna run watch"
+    "watch": "lerna run --parallel watch"
   },
   "devDependencies": {
     "husky": "^0.14.3",

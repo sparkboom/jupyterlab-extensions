@@ -1,5 +1,5 @@
 {
-  "name": "mymathjax3ext",
+  "name": "@sparkboom/my-mathjax3-ext",
   "version": "0.2.1",
   "description": "A customized MathJax 3 math renderer for JupyterLab",
   "main": "lib/index.js",
@@ -38,12 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sparkboom/my-mathjax3-ext.git"
+    "url": "https://github.com/sparkboom/jupyterlab-extensions.git"
   },
   "author": "Project Jupyter",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/sparkboom/my-mathjax3-ext/issues"
+    "url": "https://github.com/sparkboom/jupyterlab-extensions/issues"
   },
-  "homepage": "https://github.com/sparkboom/my-mathjax3-ext"
+  "homepage": "https://github.com/sparkboom/jupyterlab-extensions"
 }

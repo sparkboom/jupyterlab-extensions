@@ -4,13 +4,26 @@ This is a [monorepo](https://github.com/lerna/lerna#what-does-a-lerna-repo-look-
 
 ## Packages
 
-| Name                                              | Mime types | File extensions |
-| ------------------------------------------------- | ---------- | --------------- |
-| [mathjax3-extension](packages/mathjax3-extension) | N/A        | N/A             |
+| Name                                        | Mime types | File extensions |
+| ------------------------------------------- | ---------- | --------------- |
+| [my-mathjax2-ext](packages/my-mathjax2-ext) | N/A        | N/A             |
+| [my-mathjax3-ext](packages/my-mathjax3-ext) | N/A        | N/A             |
+
+Please note my-mathjax3-ext is a work-in-progress. Macros are not currently supported unless a custom package of MathJax is built.
 
 ## Install
 
-- mathjax3-extension: `jupyter labextension install sparkboom/my-mathjax3-ext`
+### My Mathjax 2 Extension
+
+First, disable the default MathJax 2 Extension
+`jupyter labextension disable @jupyterlab/mathjax2-extension`
+
+Install My Mathjax 2 Extension (my-mathjax2-ext)
+`jupyter labextension install sparkboom/my-mathjax3-ext`
+
+### My Mathjax 3 Extension
+
+- my-mathjax3-ext: `jupyter labextension install sparkboom/my-mathjax3-ext`
 
 ## Requirements
 
@@ -23,13 +36,19 @@ The `jlpm` command is JupyterLab's pinned version of
 `yarn` or `npm` in lieu of `jlpm` below.
 
 ```bash
-git clone https://github.com/sparkboom/my-mathjax3-ext.git
-cd my-mathjax3-ext
+git clone https://github.com/sparkboom/jupyterlab-extensions.git
+cd jupyterlab-extensions
 jlpm
 jlpm build
 ```
 
 ### Link extensions with JupyterLab
+
+Link my-mathjax2-ext:
+
+```bash
+jupyter labextension link packages/my-mathjax2-ext
+```
 
 Link my-mathjax3-ext:
 
@@ -55,10 +74,10 @@ jlpm build
 jupyter lab build
 ```
 
-You may also watch the `my-mathjax3-ext` directory for changes and automatically rebuild:
+You may also watch the `jupyterlab-extensions` directory for changes and automatically rebuild:
 
 ```bash
-# In one terminal tab, watch the my-mathjax3-ext directory
+# In one terminal tab, watch the jupyterlab-extensions directory
 jlpm watch
 
 # In another terminal tab, run jupyterlab with the watch flag

@@ -2,7 +2,6 @@
 // Distributed under the terms of the Modified BSD License.
 
 import { JupyterLabPlugin } from '@jupyterlab/application';
-
 import { ILatexTypesetter } from '@jupyterlab/rendermime';
 
 // MathJax core
@@ -10,15 +9,22 @@ import { MathJax } from 'mathjax3/mathjax3/mathjax';
 
 // TeX input
 import { TeX } from 'mathjax3/mathjax3/input/tex';
+import 'mathjax3/mathjax3/input/tex/base/BaseConfiguration.js';
+import 'mathjax3/mathjax3/input/tex/ams/AmsConfiguration.js';
+import 'mathjax3/mathjax3/input/tex/noundefined/NoUndefinedConfiguration.js';
+import 'mathjax3/mathjax3/input/tex/newcommand/NewcommandConfiguration.js';
+import 'mathjax3/mathjax3/input/tex/boldsymbol/BoldsymbolConfiguration.js';
 
 // HTML output
 import { CHTML } from 'mathjax3/mathjax3/output/chtml';
-
 import { browserAdaptor } from 'mathjax3/mathjax3/adaptors/browserAdaptor';
-
 import { TeXFont } from 'mathjax3/mathjax3/output/chtml/fonts/tex';
-
 import { RegisterHTMLHandler } from 'mathjax3/mathjax3/handlers/html';
+
+// MathJax Config
+// import MathJaxConfig from './mathjax-config';
+//
+// Macro configuration is not currently support in MathJax3
 
 RegisterHTMLHandler(browserAdaptor());
 
@@ -36,7 +42,11 @@ class emptyFont extends TeXFont {}
 export class MathJax3Typesetter implements ILatexTypesetter {
   constructor() {
     const chtml = new CHTML({ font: new emptyFont() });
-    const tex = new TeX({ inlineMath: [['$', '$'], ['\\(', '\\)']] });
+    const tex = new TeX({
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      packages: ['base', 'ams', 'noundefined', 'newcommand', 'boldsymbol']
+    });
+
     this._html = MathJax.document(window.document, {
       InputJax: tex,
       OutputJax: chtml

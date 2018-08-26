@@ -20,8 +20,8 @@ jupyter labextension install sparkboom/my-mathjax3-ext
 
 ```bash
 # Clone the repo to your local environment
-git clone https://github.com/sparkboom/my-mathjax3-ext.git
-cd jupyter-renderers
+git clone https://github.com/sparkboom/jupyterlab-extensions.git
+cd jupyterlab-extensions
 # Install dependencies
 npm install
 # Build Typescript source
@@ -39,12 +39,12 @@ You can watch the my-mathjax3-ext directory and run JupyterLab in watch mode to 
 ```bash
 # Run jupyterlab in watch mode in one terminal tab
 jupyter lab --watch
-# Watch the jupyter-renderers directory
+# Watch the jupyterlab-extensions directory
 npm run watch
 ```
 
 ## Uninstall
 
 ```bash
-jupyter labextension uninstall sparkboom/mathjax3-extension
+jupyter labextension uninstall sparkboom/my-mathjax3-ext
 ```
