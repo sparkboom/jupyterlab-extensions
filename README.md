@@ -19,7 +19,7 @@ First, disable the default MathJax 2 Extension
 `jupyter labextension disable @jupyterlab/mathjax2-extension`
 
 Install My Mathjax 2 Extension (my-mathjax2-ext)
-`jupyter labextension install sparkboom/my-mathjax3-ext`
+`jupyter labextension install sparkboom/my-mathjax2-ext`
 
 ### My Mathjax 3 Extension
 
